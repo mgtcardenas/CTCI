@@ -14,7 +14,7 @@ public class BS
 		if (leftStart > rightEnd)
 			return false;
 		
-		int mid = (leftStart + rightEnd) / 2;
+		int mid = leftStart + (rightEnd - leftStart) / 2; // use this instead to avoid overflow; equivalent to (leftStart + rightEnd) / 2
 		if (array[mid] == x)
 			return true;
 		else if (x < array[mid])
@@ -30,7 +30,7 @@ public class BS
 		
 		while (leftStart <= rightEnd)
 		{
-			int mid = (leftStart + rightEnd) / 2;
+			int mid = leftStart + (rightEnd - leftStart) / 2; // use this instead to avoid overflow; equivalent to (leftStart + rightEnd) / 2
 			if (array[mid] == x)
 				return true;
 			else if (x < array[mid])
