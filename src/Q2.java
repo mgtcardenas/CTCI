@@ -7,23 +7,22 @@ class Solution
 	static Integer[] solution(Integer[] N, int K)
 	{
 		// Your solution goes here.
+		Integer[]	biggest;
+		Integer[]	tmp;
 		
-		Integer[]	biggest	= new Integer[K];
-		Integer[]	tmp		= new Integer[K];
+		biggest = new Integer[K];
 		
 		for (int i = 0; i < K; i++)
 			biggest[i] = N[i];
 		
 		for (int i = 1; (i + K) <= N.length; i++)
 		{
-			for (int j = i, h = 0; j < (i + K); j++, h++)
-			{
-				tmp[h] = N[j];
-				System.out.print(N[j] + "-h:" + (j - i) + " ");
-			}// end for - j
+			tmp = new Integer[K];
+			
+			for (int j = i; j < (i + K); j++)
+				tmp[j - i] = N[j];
 			
 			biggest = getBiggest(biggest, tmp);
-			System.out.println();
 		}// end for - i
 		
 		return biggest;
@@ -46,15 +45,6 @@ class Solution
 		Integer[]	N	= getIntegerArray(in.next());
 		Integer		K	= Integer.parseInt(in.next());
 		System.out.print(fromIntArray(solution(N, K)));
-		
-		// TODO: Delete this after finishing, but good job
-		/*
-		 * int[] a = { 1, 2, 4, 3, 5 };
-		 * int[] b = { 1, 2, 3, 4, 5 };
-		 * 
-		 * for (int i : getBiggest(a, b))
-		 * System.out.print(i + " ");
-		 */
 	}// end main
 	
 	private static Integer[] getIntegerArray(String str)
