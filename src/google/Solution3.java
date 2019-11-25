@@ -1,3 +1,5 @@
+package google;
+
 import java.util.Scanner;
 
 public class Solution3

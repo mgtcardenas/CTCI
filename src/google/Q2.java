@@ -1,3 +1,5 @@
+package google;
+
 import java.util.Scanner;
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
