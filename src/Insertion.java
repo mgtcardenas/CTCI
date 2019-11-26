@@ -4,12 +4,12 @@
  */
 public class Insertion
 {
-	private static void printArrayPretty(int[] array)
+	private static void printArray(int[] array)
 	{
 		for (int i = 0; i < array.length - 1; i++)
 			System.out.print(array[i] + ", ");
 		System.out.println(array[array.length - 1]);
-	}// end printArrayPretty
+	}// end printArray
 	
 	private static void insertionSort(int[] array)
 	{
@@ -36,6 +36,6 @@ public class Insertion
 	{
 		int[] array = { -7, 5, 10, 0, -2, 3 };
 		insertionSort(array);
-		printArrayPretty(array);
+		printArray(array);
 	}// end main
 }// end Insertion - class
