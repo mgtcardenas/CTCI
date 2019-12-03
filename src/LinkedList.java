@@ -59,12 +59,36 @@ public class LinkedList
 		}// end while
 	}// end deleteWithValue
 	
+	void printLinkedList()
+	{
+		Node tmp = head;
+		while (tmp != null)
+		{
+			System.out.print(tmp.data + " ");
+			tmp = tmp.next;
+		}// end while
+		System.out.println();
+	}// end printLinkedList
+	
 	public static void main(String[] args)
 	{
 		LinkedList ll = new LinkedList();
 		ll.append(7);
+		ll.printLinkedList();
+		
 		ll.prepend(5);
+		ll.printLinkedList();
+		
 		ll.append(42);
+		ll.printLinkedList();
+		
 		ll.deleteWithValue(7);
+		ll.printLinkedList();
+		
+		ll.deleteWithValue(5);
+		ll.printLinkedList();
+		
+		ll.deleteWithValue(10);
+		ll.printLinkedList();
 	}// end main
 }// end LinkedList - class
