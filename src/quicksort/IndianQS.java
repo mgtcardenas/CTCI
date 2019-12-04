@@ -46,9 +46,9 @@ public class IndianQS
 		
 		while (i < j)
 		{
-			do // since we always increment at least once, we don't never compare the pivot
+			do // since we always increment at least once, we never compare the pivot
 				i++;
-			while (i < A.length - 1 && A[i] <= pivot); // end do-while, the index safety was not mentioned in the video
+			while (i < A.length && A[i] <= pivot); // end do-while, the index safety was not mentioned in the video
 			
 			do // since we always decrement at least once, we don't cause an array index out of bounds exception
 				j--;

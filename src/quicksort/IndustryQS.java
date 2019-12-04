@@ -23,7 +23,7 @@ public class IndustryQS
 	{
 		if (leftStart >= rightEnd)
 			return;
-		int	pivot	= array[leftStart + (rightEnd - leftStart) / 2]; // avoid overflow; equivalent to (leftStart + rightEnd) /2
+		int	pivot	= array[leftStart + (rightEnd - leftStart) / 2]; // avoid overflow; equivalent to (leftStart + rightEnd) / 2
 		int	index	= industryPartition(array, leftStart, rightEnd, pivot);
 		industryQuickSort(array, leftStart, index - 1);
 		industryQuickSort(array, index, rightEnd);
