@@ -63,8 +63,8 @@ public class HashTable<K, V>
 		if (prev != null)
 			prev.next = head.next;
 		else
-			bucketArray.set(bucketIndex, head.next); // TODO: Can't we always do this?
-			
+			bucketArray.set(bucketIndex, head.next);
+		
 		return head.value;
 	}// end remove
 	
@@ -105,7 +105,7 @@ public class HashTable<K, V>
 	
 	public static void main(String[] args)
 	{
-		HashTable<String, Integer> ht = new HashTable();
+		HashTable<String, Integer> ht = new HashTable<>();
 		System.out.println(ht.isEmpty());
 		ht.add("Marco", 1);
 		ht.add("Antonio", 2);
